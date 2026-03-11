@@ -86,7 +86,7 @@ class _StopwatchPageState extends State<StopwatchPage> {
               Text(
                 _sw.isRunning ? 'Berjalan...' : 'Dihentikan',
                 style: TextStyle(
-                    color: Colors.white.withOpacity(0.7), fontSize: 13),
+                    color: Colors.white.withValues(alpha: 0.7), fontSize: 13),
               ),
             ]),
           ),
@@ -97,32 +97,41 @@ class _StopwatchPageState extends State<StopwatchPage> {
               Expanded(
                 child: ElevatedButton.icon(
                   onPressed: _startStop,
-                  icon: Icon(_sw.isRunning
-                      ? Icons.pause
-                      : Icons.play_arrow),
-                  label: Text(_sw.isRunning ? 'Pause' : 'Start'),
+                  icon: Icon(_sw.isRunning ? Icons.pause : Icons.play_arrow, size: 20),
+                  label: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(_sw.isRunning ? 'Pause' : 'Start'),
+                  ),
                   style: ElevatedButton.styleFrom(
-                      backgroundColor:
-                          _sw.isRunning ? cError : cPrimary),
+                      padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 8),
+                      backgroundColor: _sw.isRunning ? cError : cPrimary),
                 ),
               ),
-              const SizedBox(width: 10),
+              const SizedBox(width: 8),
               Expanded(
                 child: ElevatedButton.icon(
                   onPressed: _lap,
-                  icon: const Icon(Icons.flag_outlined),
-                  label: const Text('Lap'),
-                  style:
-                      ElevatedButton.styleFrom(backgroundColor: cAccent),
+                  icon: const Icon(Icons.flag_outlined, size: 20),
+                  label: const FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text('Lap'),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 8),
+                      backgroundColor: cAccent),
                 ),
               ),
-              const SizedBox(width: 10),
+              const SizedBox(width: 8),
               Expanded(
                 child: ElevatedButton.icon(
                   onPressed: _reset,
-                  icon: const Icon(Icons.refresh),
-                  label: const Text('Reset'),
+                  icon: const Icon(Icons.refresh, size: 20),
+                  label: const FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text('Reset'),
+                  ),
                   style: ElevatedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 8),
                       backgroundColor: cSurface,
                       foregroundColor: cText),
                 ),

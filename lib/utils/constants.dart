@@ -6,9 +6,9 @@ const String kPassword = 'rafitampan';
 
 const List<Map<String, String>> kAnggota = [
   {'nama': 'Dewa Setya Bagus ', 'nim': '123230063'},
-  {'nama': 'Rafi', 'nim': '1232300'},
-  {'nama': 'Star', 'nim': '1232300'},
-  {'nama': 'Anggota Empat', 'nim': '123230066'},
+  {'nama': 'Rafi Pradipa Adriano', 'nim': '123230061'},
+  {'nama': 'Bintang jati Kesuma', 'nim': '123230075'},
+   {'nama': 'Muhamad Akbar Riziq', 'nim': '123230062'},
 ];
 // ─────────────────────────────────────────────────────────────
 

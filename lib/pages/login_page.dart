@@ -44,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
                     width: 80,
                     height: 80,
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.15),
+                      color: Colors.white.withValues(alpha: 0.15),
                       shape: BoxShape.circle,
                     ),
                     child: const Icon(Icons.terrain_rounded,
@@ -61,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
                   Text('Teknologi Dan Pemrograman Mobile',
                       style: TextStyle(
                           fontSize: 13,
-                          color: Colors.white.withOpacity(0.7))),
+                          color: Colors.white.withValues(alpha: 0.7))),
                   const SizedBox(height: 36),
                   Container(
                     padding: const EdgeInsets.all(24),
@@ -70,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
-                            color: Colors.black.withOpacity(0.15),
+                            color: Colors.black.withValues(alpha: 0.15),
                             blurRadius: 24,
                             offset: const Offset(0, 8))
                       ],

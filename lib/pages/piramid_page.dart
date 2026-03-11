@@ -90,14 +90,14 @@ class _PyramidPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final stroke = Paint()
-      ..color = cPrimary.withOpacity(0.7)
+      ..color = cPrimary.withValues(alpha: 0.7)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 2;
     final fill = Paint()
-      ..color = cPrimary.withOpacity(0.08)
+      ..color = cPrimary.withValues(alpha: 0.08)
       ..style = PaintingStyle.fill;
     final dashed = Paint()
-      ..color = cPrimary.withOpacity(0.35)
+      ..color = cPrimary.withValues(alpha: 0.35)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.5;
 
