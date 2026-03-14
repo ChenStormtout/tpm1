@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// ─── CONFIG: Ganti sesuai kelompok ───────────────────────────
+
 const String kUsername = 'rafitampan';
 const String kPassword = 'rafitampan';
 
@@ -12,7 +12,7 @@ const List<Map<String, String>> kAnggota = [
 ];
 // ─────────────────────────────────────────────────────────────
 
-// ─── COLORS ──────────────────────────────────────────────────
+
 const Color cBg = Color(0xFFF4F1EB);
 const Color cSurface = Color(0xFFEAE5D8);
 const Color cPrimary = Color(0xFF3D6B4F);
@@ -24,7 +24,7 @@ const Color cCard = Color(0xFFFFFFFA);
 const Color cError = Color(0xFFB85C3A);
 // ─────────────────────────────────────────────────────────────
 
-// ─── THEME ───────────────────────────────────────────────────
+
 ThemeData get appTheme => ThemeData(
       scaffoldBackgroundColor: cBg,
       colorScheme: const ColorScheme.light(

@@ -51,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
                         size: 44, color: Colors.white),
                   ),
                   const SizedBox(height: 16),
-                  const Text('Aplikasi Kelompok',
+                  const Text('Tugas Aplikasi',
                       style: TextStyle(
                           fontSize: 26,
                           fontWeight: FontWeight.bold,
