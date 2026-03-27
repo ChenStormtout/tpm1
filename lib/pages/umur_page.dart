@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import '../utils/constants.dart';
 import '../widgets/widgets.dart';
 
 class UmurPage extends StatefulWidget {
@@ -30,8 +29,11 @@ class _UmurPageState extends State<UmurPage> {
       if (pickedTime != null) {
         setState(() {
           _birthDate = DateTime(
-            pickedDate.year, pickedDate.month, pickedDate.day,
-            pickedTime.hour, pickedTime.minute,
+            pickedDate.year,
+            pickedDate.month,
+            pickedDate.day,
+            pickedTime.hour,
+            pickedTime.minute,
           );
           _hitungUmur();
         });
@@ -49,16 +51,26 @@ class _UmurPageState extends State<UmurPage> {
     int hours = now.hour - _birthDate!.hour;
     int minutes = now.minute - _birthDate!.minute;
 
-    if (minutes < 0) { minutes += 60; hours--; }
-    if (hours < 0) { hours += 24; days--; }
+    if (minutes < 0) {
+      minutes += 60;
+      hours--;
+    }
+    if (hours < 0) {
+      hours += 24;
+      days--;
+    }
     if (days < 0) {
       months--;
       var prevMonth = DateTime(now.year, now.month, 0);
       days += prevMonth.day;
     }
-    if (months < 0) { months += 12; years--; }
+    if (months < 0) {
+      months += 12;
+      years--;
+    }
 
-    _hasilUmur = '$years Tahun, $months Bulan,\n$days Hari, $hours Jam, $minutes Menit';
+    _hasilUmur =
+        '$years Tahun, $months Bulan,\n$days Hari, $hours Jam, $minutes Menit';
   }
 
   @override
@@ -67,7 +79,10 @@ class _UmurPageState extends State<UmurPage> {
       appBar: AppBar(title: const Text('Kalkulator Umur')),
       body: Column(
         children: [
-          buildPageHeader('Hitung Detail Umur', 'Masukkan tanggal dan jam lahir Anda'),
+          buildPageHeader(
+            'Hitung Detail Umur',
+            'Masukkan tanggal dan jam lahir Anda',
+          ),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(20),
@@ -79,14 +94,19 @@ class _UmurPageState extends State<UmurPage> {
                       onPressed: _pilihTanggalLahir,
                       icon: const Icon(Icons.cake),
                       label: const Text('Pilih Tanggal & Jam Lahir'),
-                      style: ElevatedButton.styleFrom(padding: const EdgeInsets.all(16)),
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.all(16),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 24),
                   if (_birthDate != null) ...[
                     Text(
                       'Waktu Lahir: ${DateFormat('dd MMM yyyy, HH:mm').format(_birthDate!)}',
-                      style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                     const SizedBox(height: 20),
                     ResultCard(label: 'Umur Anda Saat Ini:', value: _hasilUmur),
