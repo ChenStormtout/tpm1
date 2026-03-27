@@ -12,7 +12,7 @@ class KelompokPage extends StatelessWidget {
       body: Column(
         children: [
           buildPageHeader(
-              'Anggota Kelompok', '${kAnggota.length} orang terdaftar'),
+              'Anggota Kelompok', '${kAnggota.length} manusia'),
           Expanded(
             child: ListView.separated(
               padding: const EdgeInsets.all(16),
