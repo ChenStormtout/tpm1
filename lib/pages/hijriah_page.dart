@@ -23,7 +23,6 @@ class _HijriahPageState extends State<HijriahPage> {
     );
 
     if (picked != null) {
-      // Inisialisasi bahasa ke lokal (opsional, defaultnya bahasa Inggris/Arab)
       HijriCalendar.setLocal('en');
 
       final hijriDate = HijriCalendar.fromDate(picked);
