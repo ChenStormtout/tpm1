@@ -8,6 +8,9 @@ import 'bilangan_page.dart';
 import 'total_angka_page.dart';
 import 'stopwatch_page.dart';
 import 'piramid_page.dart';
+import 'weton_page.dart';
+import 'umur_page.dart';
+import 'hijriah_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -43,6 +46,9 @@ class HomePage extends StatelessWidget {
       'label': 'Luas & Volume\nPiramid',
       'page': 'piramid'
     },
+    {'icon': Icons.calendar_month_outlined, 'label': 'Cek Hari\n& Weton', 'page': 'weton'},
+    {'icon': Icons.cake_outlined, 'label': 'Kalkulator\nUmur', 'page': 'umur'},
+    {'icon': Icons.mosque_outlined, 'label': 'Konversi\nHijriah', 'page': 'hijriah'},
   ];
 
   void _navigate(BuildContext context, String page) {
@@ -53,6 +59,9 @@ class HomePage extends StatelessWidget {
       'total': const TotalAngkaPage(),
       'stopwatch': const StopwatchPage(),
       'piramid': const PiramidPage(),
+      'weton': const WetonPage(),
+      'umur': const UmurPage(),
+      'hijriah': const HijriahPage(),
     };
     Navigator.push(
         context, MaterialPageRoute(builder: (_) => pages[page]!));
