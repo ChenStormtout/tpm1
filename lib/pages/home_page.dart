@@ -11,6 +11,7 @@ import 'piramid_page.dart';
 import 'weton_page.dart';
 import 'umur_page.dart';
 import 'hijriah_page.dart';
+import 'saka_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -30,6 +31,11 @@ class HomePage extends StatelessWidget {
       'icon': Icons.filter_alt_outlined,
       'label': 'Ganjil/Genap\n& Prima',
       'page': 'bilangan'
+    },
+    {
+      'icon': Icons.temple_buddhist_outlined,
+      'label': 'Konversi\nSaka',
+      'page': 'saka'
     },
     {
       'icon': Icons.format_list_numbered_outlined,
@@ -62,6 +68,7 @@ class HomePage extends StatelessWidget {
       'weton': const WetonPage(),
       'umur': const UmurPage(),
       'hijriah': const HijriahPage(),
+      'saka': const SakaPage(),
     };
     Navigator.push(
         context, MaterialPageRoute(builder: (_) => pages[page]!));
